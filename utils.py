@@ -11,9 +11,11 @@ from colorama import Fore, Style
 
 dotenv.load_dotenv()
 
-
 def clear_console():
-    os.system("cls")
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
 def print_answer(answer):
