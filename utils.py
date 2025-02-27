@@ -27,7 +27,7 @@ def get_azure_model_client():
         model="gpt-4o",
         api_key=os.getenv("AZURE_OPENAI_API_KEY"),
         azure_endpoint=os.getenv("AZURE_OPENAI_API_ENDPOINT"),
-        api_version="2024-08-01-preview",
+        api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
         temperature=0,
     )
     return model_client
